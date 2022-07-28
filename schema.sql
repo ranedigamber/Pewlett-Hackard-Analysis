@@ -98,13 +98,13 @@ AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 SELECT * FROM retirement_info;
 
 --Joining departments and dept_manager tables
-SELECT departments.dept_name,
-	dept_manager.emp_no,
-	dept_manager.from_date,
-	dept_manager.to_date
-FROM departments
-INNER JOIN dept_manager 
-ON departments.dept_no=dept_manager.dept_no;
+SELECT d.dept_name,
+	dm.emp_no,
+	dm.from_date,
+	dm.to_date
+FROM departments as d
+INNER JOIN dept_manager as dm 
+ON d.dept_no=dm.dept_no;
 
 --Joining retirement_info and dept_emp tables
 SELECT retirement_info.emp_no,
@@ -149,7 +149,7 @@ FROM current_emp
 
 --Employee count by department number
 SELECT COUNT(ce.emp_no), de.dept_no
-INTO retirement_emp_dept
+-- INTO retirement_emp_dept
 FROM current_emp as ce
 LEFT JOIN dept_emp as de
 ON ce.emp_no=de.emp_no
@@ -169,10 +169,87 @@ SELECT e.emp_no,
 	de.to_date
 INTO emp_info
 FROM employees as e
-INNER JOIN salaries as s
-ON (e.emp_no = s.emp_no)
-INNER JOIN dept_emp as de
-ON (e.emp_no = de.emp_no)
+	INNER JOIN salaries as s
+		ON (e.emp_no = s.emp_no)
+	INNER JOIN dept_emp as de
+		ON (e.emp_no = de.emp_no)
 WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (e.hire_date BETWEEN '1985-01-01' AND '1988-12-31')
 AND de.to_date = ('9999-01-01');
+
+-- Create Management table
+SELECT dm.dept_no,
+	d.dept_name,
+	dm.emp_no,
+	ce.last_name,
+	ce.first_name,
+	dm.from_date,
+	dm.to_date
+INTO manager_info
+FROM dept_manager as dm
+	INNER JOIN departments as d
+		ON (dm.dept_no=d.dept_no)
+	INNER JOIN current_emp as ce
+		ON (dm.emp_no=ce.emp_no);
+
+-- Create a list of retirees with department
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO dept_info
+FROM current_emp as ce
+	INNER JOIN dept_emp as de
+		ON (ce.emp_no = de.emp_no)
+	INNER JOIN departments as d
+		ON (de.dept_no = d.dept_no);
+		
+-- Create a list of retiring employees for the Sales team
+SELECT ce.emp_no,
+	   ce.first_name,
+	   ce.last_name,
+	   de.dept_no
+FROM current_emp as ce
+	INNER JOIN dept_emp as de
+	ON ce.emp_no = de.emp_no
+WHERE de.dept_no = 'd007'; 
+
+-- Create a list of retiring employees for the Mentoring program
+SELECT ce.emp_no,
+	   ce.first_name,
+	   ce.last_name,
+	   de.dept_no
+FROM current_emp as ce
+	INNER JOIN dept_emp as de
+	ON ce.emp_no = de.emp_no
+WHERE de.dept_no IN ('d007', 'd005'); 
+
+SELECT * from departments;
+
+--------------------------------------------------------------
+-- Testing for the challenge
+
+SELECT DISTINCT ON (ti.title) ti.title,
+		e.emp_no,
+		e.first_name,
+		e.last_name 
+FROM employees as e
+	INNER JOIN titles as ti
+	ON e.emp_no = ti.emp_no
+WHERE birth_date BETWEEN '1953-01-01' AND '1953-12-31'
+GROUP BY e.emp_no,
+		 ti.title;
+
+-- For deliverable 1
+SELECT e.emp_no,
+	   e.first_name,
+	   e.last_name,
+	   ti.title,
+	   ti.from_date,
+	   ti.to_date		
+FROM employees as e
+	INNER JOIN titles as ti
+	ON e.emp_no = ti.emp_no
+WHERE birth_date BETWEEN '1953-01-01' AND '1953-12-31';
+
+
