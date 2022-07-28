@@ -8,8 +8,11 @@ In this assignment we are analyzing data for Pewlett Hackard company. We are ass
  
 
 ## Results:
-### How do the total number of rides compare between the city types 
-  * From the summary DataFrame and for the given period these are the comparison for the total rides:
+### Generation of Entity Relationship Diagram (ERD)
+  * In order to perfom a through analysis a clear and robust ERD needed to be generated. Here is a ERD of the various tables in this SQL database
+ 
+![EmployessDB-export](https://user-images.githubusercontent.com/107159218/181394470-f9e60ec8-fbd9-4d2b-b122-946d424662bd.png)
+
 	1. Urban: 1,625 (68.4%)
 	2. Suburban: 625 (26.3%)
 	3. Rural: 125 (5.3%)
