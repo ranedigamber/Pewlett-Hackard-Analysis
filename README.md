@@ -27,7 +27,8 @@ In this assignment we are analyzing data for Pewlett Hackard company. We are ass
  
  ![retiring_titles](https://user-images.githubusercontent.com/107159218/181396973-95e732fb-3b3c-4fbd-9f5d-aba39c64a661.PNG)
 
- *  
+ 	### Two take aways from the 1st Deliverable
+	
 	1. Urban: 2,405 (~80.9%)
 	2. Suburban: 490 (~16.5%)
 	3. Rural: 78 (~2.6%)
