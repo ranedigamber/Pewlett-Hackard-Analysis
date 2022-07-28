@@ -28,9 +28,8 @@ In this assignment we are analyzing data for Pewlett Hackard company. We are ass
  ![retiring_titles](https://user-images.githubusercontent.com/107159218/181396973-95e732fb-3b3c-4fbd-9f5d-aba39c64a661.PNG)
 
  ### The take aways from the 1st Deliverable
-	
-	1. From the retiring titles tables it is clear that there is a large number of senior level employees that are due for retirement which, may not be a good situation for any company 
-	2. In a previous analysis we had concluded that there were only 5 departments with active managers (7.3.5). After this round of analysis we learn that two manager are also due for retirement. This could be a major oversight for a company with hundereds of thousands of employees on its payroll. 
+	1. From the retiring titles tables it is clear that there is a large number of senior level employees that are due for retirement which, may not be a good     		  situation for any company 
+	2. In a previous analysis we had concluded that there were only 5 departments with active managers (7.3.5). After this round of analysis we learn that two 	      manager are also due for retirement. This could be a major oversight for a company with hundereds of thousands of employees on its payroll. 
 	3. The engineers account for ~50% of the total number of retiree 
 	
 
@@ -45,7 +44,7 @@ In this assignment we are analyzing data for Pewlett Hackard company. We are ass
 
 ### Take aways from the 2nd Deliverable
 	1. There are currently 1549 employees that are eligible for the mentorship program
-	2. Considering that there are ~300,000 employees of which ~90,000 are due for retirement. This leaves ~210,000 employees with 1549 mentors which, implies 135 employees/mentor. This may not be the most ideal situtation.
+	2. Considering that there are ~300,000 employees of which ~90,000 are due for retirement. This leaves ~210,000 employees with 1549 mentors which, implies 135 		 employees/mentor. This may not be the most ideal situtation.
  
 ### Summary  
 * As mentioned in the Deliverables 1&2, Pewlett-Packard has ~90,000 or 30% of their employee workforce that are eligible for retirement. Of these ~45,000 or 50% are engineers and 28,000 or 31% are Senior staff. This is the "Silver tsunami" that the company is expecting. 
