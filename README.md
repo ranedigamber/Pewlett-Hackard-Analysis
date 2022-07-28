@@ -44,8 +44,8 @@ In this assignment we are analyzing data for Pewlett Hackard company. We are ass
 
 
 ### Take aways from the 2nd Deliverable
-	1. There are currently 1549 employees that are eligible for the mentorship program
-	2. Considering that there are ~300,000 employees of which ~90,000 are due for retirement. This leaves ~210,000 employees with 1549 mentors which, implies 135 		 employees/mentor. This may not be the most ideal situtation.
+ 1. There are currently 1549 employees that are eligible for the mentorship program
+ 2. Considering that there are ~300,000 employees of which ~90,000 are due for retirement. This leaves ~210,000 employees with 1549 mentors which, implies 135 	    employees/mentor. This may not be the most ideal situtation.
  
 ### Summary  
 * As mentioned in the Deliverables 1&2, Pewlett-Packard has ~90,000 or 30% of their employee workforce that are eligible for retirement. Of these ~45,000 or 50% are engineers and 28,000 or 31% are Senior staff. This is the "Silver tsunami" that the company is expecting. 
