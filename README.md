@@ -28,9 +28,10 @@ In this assignment we are analyzing data for Pewlett Hackard company. We are ass
  ![retiring_titles](https://user-images.githubusercontent.com/107159218/181396973-95e732fb-3b3c-4fbd-9f5d-aba39c64a661.PNG)
 
  ### The take aways from the 1st Deliverable
-	1. From the retiring titles tables it is clear that there is a large number of senior level employees that are due for retirement which, may not be a good     		  situation for any company 
-	2. In a previous analysis we had concluded that there were only 5 departments with active managers (7.3.5). After this round of analysis we learn that two 	      manager are also due for retirement. This could be a major oversight for a company with hundereds of thousands of employees on its payroll. 
-	3. The engineers account for ~50% of the total number of retiree 
+ 
+ 1. From the retiring titles tables it is clear that there is a large number of senior level employees that are due for retirement which, may not be a good     situation for any company 
+ 2. In a previous analysis we had concluded that there were only 5 departments with active managers (7.3.5). After this round of analysis we learn that two 	      manager are also due for retirement. This could be a major oversight for a company with hundereds of thousands of employees on its payroll. 
+ 3. The engineers account for ~50% of the total number of retiree 
 	
 
 ### For deliverable 2. The employees eligible for the Mentorship program  
